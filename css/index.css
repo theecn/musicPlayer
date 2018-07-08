@@ -1,0 +1,113 @@
+/*reset css*/
+* {
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style-type: none;
+}
+body,html{
+	height: 100%;
+}
+/*comman css*/
+.cover {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.selecte {
+	border-left: 3px solid #1296db;
+}
+/*main css*/
+.container {
+	width: 500px;
+	height: 230px;
+	border: 1px solid #fff;
+	padding:10px;
+	text-align: center;
+	position: relative;
+	box-shadow: 1px 1px 2px #ccc;
+}
+.container > a {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background-size: cover;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+.music-panel {
+	position: relative;
+}
+.music-panel div {
+	width: 100%;
+
+}
+.music-panel > div:first-chilid {
+	padding: 10px;
+}
+.music-panel >p:nth-of-type(1) {
+	font-size: 20px;
+	margin-top: 10px;
+}
+.music-panel >p:nth-of-type(2) {
+	padding-left: 100px;
+	margin-top: 10px;
+}
+.music-panel .bars {
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+	cursor: pointer;
+}
+.music-panel .bars > a {
+	width: 32px;
+	height: 32px;
+	margin-right: 10px;
+	margin-top: 20px;
+	font-size: 26px;
+}
+.music-panel .bars > a:hover {
+	opacity: .3;
+	color: #fff;
+}
+.line {
+	margin-top: 20px;
+	position: relative;
+	cursor: pointer;
+}
+.line .total {
+	background: #fff;
+	margin: 0 auto;
+	width: 400px;
+	height: 2px;
+}
+.line .now {
+	height: 3px;
+	/*width: 400px;*/
+	background: #1296db;
+	position: absolute;
+	left: 50px;
+	top: -1px;
+}
+.times {
+	margin-top: 20px;
+}
+/*.jindu::before {
+	background: #1296db;
+	width: 1px;
+	height: 2px;
+	display: block;
+	content: '';
+}*/
+/*待播音乐列表*/
+.contents > li:nth-child(3),
+.contents > li:nth-child(4) {
+	height: 30px;
+	margin-top: 10px;
+}

@@ -1,0 +1,99 @@
+/*comman css*/
+* {
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style-type: none;
+}
+body,html{
+	height: 100%;
+}
+body {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.clearfix {
+
+}
+/*main div*/
+.container {
+	width: 500px;
+	height: 230px;
+	border: 1px solid green;
+	padding:10px;
+	text-align: center;
+	position: relative;
+}
+.container a {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background-size: cover;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+.contents {
+	position: relative;
+}
+.contents li {
+	width: 100%;
+}
+.contents > li:first-chilid {
+	padding: 10px;
+}
+.contents > li>p:nth-of-type(1) {
+	font-size: 20px;
+	margin-top: 20px;
+}
+.contents > li>p:nth-of-type(2) {
+	padding-left: 100px;
+	margin-top: 10px;
+}
+.contents .bars {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.contents .bars > li {
+	width: 32px;
+	height: 32px;
+	float: left;
+	margin-right: 10px;
+	margin-top: 20px;
+}
+.contents .bars > li:hover {
+	opacity: .8;
+	background: #fff;
+}
+.contents .line {
+	margin-top: 10px;
+}
+.contents .line .jindu {
+	background: #fff;
+	margin: 0 auto;
+	width: 400px;
+	height: 2px;
+}
+.jindu::before {
+	background: #1296db;
+	width: 1px;
+	height: 2px;
+	display: block;
+	content: '';
+}
+/*待播音乐列表*/
+.contents > li:nth-child(3),
+.contents > li:nth-child(4) {
+	height: 30px;
+	margin-top: 10px;
+}
+.contents > li:nth-child(3) {
+	border-left: 3px solid #1296db;
+}
