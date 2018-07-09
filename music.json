@@ -1,14 +1,14 @@
-[{
- 	src:'C:\Users\key\musicPlayer\musics\成都.mp3',
- 	title:'成都',
- 	author:'赵雷'
+ [{
+ 	"src":"http://www.kugou.com/song/#hash=CBF8FA6C9A4BC799D2A55C64F419D86C&album_id=1946722",
+ 	"title":"成都",
+ 	"author":"赵雷"
  	},{
- 	src:'C:\Users\key\musicPlayer\musics\童话镇.mp3',
- 	title:'童话镇',
- 	author:'陈一发'	
+ 	"src":"C:\/Users\/key\/musicPlayer\/musics\/童话镇.mp3",
+ 	"title":"童话镇",
+ 	"author":"陈一发"	
  	},{
- 	src:'C:\Users\key\musicPlayer\musics\童话镇.mp3',
- 	title:'童话镇',
- 	author:'陈一发'	
+ 	"src":"C:\/Users\/key\/musicPlayer\/musics\/童话镇.mp3",
+ 	"title":"童话镇",
+ 	"author":"陈一发1"	
  	}	
  ]
