@@ -10,7 +10,10 @@ getMusicList(function(list){
 	// audio.play()
 })
 audio.ontimeupdate = function(){
-	$('.now').style.width = (this.currentTime/this.duration)*100+"%";
+	setInterval(function(){
+		$('.now').style.width = (audio.currentTime/audio.duration)*80+"%";
+	},1000)
+	
 
 }
 audio.onplay = function() {
@@ -24,6 +27,10 @@ audio.onplay = function() {
 audio.onpause = function() {
 	clearInterval(clock);
 }
+audio.onended = function() {
+	currentIndex = (++currentIndex)%musicList.length;
+	loadMusic(musicList[currentIndex]);	
+} 
 $('#player').onclick = function() {
 	if (audio.paused) {
 		audio.play();
@@ -40,6 +47,11 @@ $('#player').onclick = function() {
 $('#prev').onclick = function() {
 	currentIndex = (musicList.length+(--currentIndex))%musicList.length;
 	loadMusic(musicList[currentIndex]);
+}
+$('.line').onclick = function(e) {
+	var percent = e.offsetX/parseInt(getComputedStyle(this).width);
+	console.log(percent);
+	audio.currentTime = audio.duration*percent;
 }
 $('#next').onclick = function() {
 	currentIndex = (++currentIndex)%musicList.length;
@@ -65,7 +77,7 @@ function loadMusic(musicobj) {
 	$('#names').innerText = musicobj.title;
 	console.log(musicobj.title)
 	$('#singer').innerText = musicobj.author;
-	// $('.cover').style.bakcground.url =  musicobj.imgs;
+	$('.cover').style.backgroundImage =  'url(' + musicobj.imgs + ')';
 	audio.src = musicobj.src;
 
 }
